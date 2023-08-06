@@ -3,19 +3,26 @@ import "./NewsItem.css";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl } = this.props;
+    let { title, description, imageUrl, newsUrl } = this.props;
 
-    if (description.length > 150) {
-      description = description.slice(0, 100) + "...";
+    if (title.length > 80) {
+      title = title.slice(0, 80) + "...";
+    }
+
+    if (description.length > 140) {
+      description = description.slice(0, 140) + "...";
     }
     return (
-        <div className="container card my-3" style={{ width: "25rem" }}>
-          <div className="col">
-            <h2>{title}</h2>
-            <img className="image p-2" src={imageUrl} alt="" />
-            <p>{description}</p>
-          </div>
+      <div className="container card my-3" style={{ width: "25rem" }}>
+        <div className="col mt-2 px-1">
+          <h2>{title}</h2>
+          <img className="image p-2" src={imageUrl} alt="" />
+          <p>{description}</p>
+          <a className="btn btn-success mb-3" href={newsUrl}>
+            Read More
+          </a>
         </div>
+      </div>
     );
   }
 }
