@@ -5,12 +5,16 @@ export default class NewsItem extends Component {
   render() {
     let { title, description, imageUrl, newsUrl } = this.props;
 
-    if (title.length > 65) {
+    if (title !== null && title.length > 65) {
       title = title.slice(0, 65) + "...";
+    } else {
+      title = "";
     }
 
-    if (description.length > 140) {
+    if (description !== null && description.length > 140) {
       description = description.slice(0, 140) + "...";
+    } else {
+      description = "";
     }
 
     if (imageUrl === null) {
