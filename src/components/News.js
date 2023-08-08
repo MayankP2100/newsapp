@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class News extends Component {
   constructor() {
@@ -22,8 +23,6 @@ export default class News extends Component {
       totalResults: parsedData.totalResults,
     });
   }
-
-  async componentDidUpdate() {}
 
   handlePreviousClick = async () => {
     let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=2aebf6ff38d648849b5ad39a03a55042&page=${
@@ -54,6 +53,10 @@ export default class News extends Component {
   };
 
   render() {
+    const handleArrowUp = () => {
+      window.scrollTo(0, 0);
+    };
+
     return (
       <div className="container">
         <div className="container row col-md-auto mx-auto">
@@ -75,8 +78,17 @@ export default class News extends Component {
               disabled={this.state.page <= 1}
               onClick={this.handlePreviousClick}
             >
-              &larr; Previous
+              &larr;Previous
             </button>
+
+            <button
+              className="btn btn-sm btn-success"
+              onClick={handleArrowUp}
+              style={{ width: "3rem" }}
+            >
+              <FontAwesomeIcon icon="fa-solid fa-arrow-up" />
+            </button>
+
             <button
               className="btn btn-primary"
               style={{ width: "8rem" }}
@@ -85,7 +97,7 @@ export default class News extends Component {
               }
               onClick={this.handleNextClick}
             >
-              Next &rarr;
+              Next&rarr;
             </button>
           </div>
         </div>

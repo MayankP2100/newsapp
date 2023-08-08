@@ -2,3 +2,9 @@
     font-family: "Chomsky Regular";
     font-size: 4rem;
 }
+
+h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3rem;
+    opacity: 75%;
+}
