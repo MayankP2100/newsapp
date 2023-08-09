@@ -3,18 +3,18 @@ import "./NewsItem.css";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl } = this.props;
+    let { title, description, imageUrl, newsUrl, content } = this.props;
 
-    if (title !== null && title.length > 65) {
-      title = title.slice(0, 65) + "...";
+    if (title !== null) {
+      title = title.slice(0, 60) + "...";
     } else {
       title = "";
     }
 
-    if (description !== null && description.length > 140) {
+    if (description !== null) {
       description = description.slice(0, 140) + "...";
     } else {
-      description = "";
+      description = content ? content.slice(0, 140) + "..." : title.slice(0, 140) + "...";
     }
 
     if (imageUrl === null) {

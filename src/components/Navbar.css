@@ -1,10 +1,13 @@
 .title {
     font-family: "Chomsky Regular";
-    font-size: 4rem;
+    font-size: 2rem;
 }
 
 h6 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.3rem;
     opacity: 75%;
+    border-top: 1px solid #000000;
+    padding-top: 0.5rem;
 }
+
