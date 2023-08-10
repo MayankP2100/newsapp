@@ -14,7 +14,7 @@ export default class Navbar extends Component {
               className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="#navbarNavDropdown"
+              data-bs-target=".collapse.navbar-collapse"
               aria-controls="navbarNavDropdown"
               aria-expanded="false"
               aria-label="Toggle navigation"
@@ -80,7 +80,10 @@ export default class Navbar extends Component {
                       </a>
                     </li>
                     <li>
-                      <a className="dropdown-item border-2 border-top border-bottom" href="/" >
+                      <a
+                        className="dropdown-item border-2 border-top border-bottom"
+                        href="/"
+                      >
                         United States
                       </a>
                     </li>
@@ -96,7 +99,9 @@ export default class Navbar extends Component {
           </div>
         </nav>
         <div className="container">
-          <h6 className="d-flex  justify-content-center text-center px-5">Top Headlines</h6>
+          <h6 className="d-flex  justify-content-center text-center px-5">
+            Top Headlines
+          </h6>
         </div>
       </>
     );
