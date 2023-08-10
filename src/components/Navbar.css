@@ -11,3 +11,6 @@ h6 {
     padding-top: 0.5rem;
 }
 
+.offcanvas-size-sm {
+    --bs-offcanvas-width: min(95vw, 250px) !important;
+}

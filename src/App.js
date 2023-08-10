@@ -18,7 +18,6 @@ export default class App extends Component {
 
           <Routes>
             <Route
-              exact
               path="/"
               element={
                 <News

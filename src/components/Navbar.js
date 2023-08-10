@@ -14,16 +14,33 @@ export default class Navbar extends Component {
             <button
               className="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target=".collapse.navbar-collapse"
-              aria-controls="navbarNavDropdown"
+              data-bs-toggle="offcanvas"
+              data-bs-target=".offcanvas.offcanvas-end"
+              aria-controls="#navbarNavDropdown"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <span
+                className="navbar-toggler-icon"
+                data-bs-target=".offcanvas.offcanvas-end"
+              ></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul className="navbar-nav">
+            <div
+              className="offcanvas offcanvas-end offcanvas-size-sm"
+              id="navbarNavDropdown"
+              data-bs-backdrop="static"
+              style={{overflow: "auto"}}
+            >
+              <div className="offcanvas-header">
+                <h4 className="offcanvas-title p-2">Categories</h4>
+                <button
+                  className="btn-close text-reset"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <hr className="border-2" />
+              <ul className="navbar-nav p-3">
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/">
                     Home
