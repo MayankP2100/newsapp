@@ -14,7 +14,9 @@ export default class NewsItem extends Component {
     if (description !== null) {
       description = description.slice(0, 140) + "...";
     } else {
-      description = content ? content.slice(0, 140) + "..." : title.slice(0, 140) + "...";
+      description = content
+        ? content.slice(0, 140) + "..."
+        : title.slice(0, 140) + "...";
     }
 
     if (imageUrl === null) {
@@ -28,9 +30,11 @@ export default class NewsItem extends Component {
           <h2>{title}</h2>
           <img className="image p-2" src={imageUrl} alt="" />
           <p>{description}</p>
-          <a className="btn btn-success mb-3" href={newsUrl}>
-            Read More
-          </a>
+          <div className="text-center">
+            <a className="btn btn-success mb-3" href={newsUrl}>
+              Read More
+            </a>
+          </div>
         </div>
       </div>
     );
