@@ -18,46 +18,88 @@ export default class App extends Component {
 
           <Routes>
             <Route
-              exact path="/"
+              exact
+              path="/"
               element={
-                <News pageSize={12} country={"in"} category={"general"} />
+                <News
+                  key="general"
+                  pageSize={12}
+                  country={"in"}
+                  category={"general"}
+                />
               }
             />
             <Route
+              exact
               path="/business"
               element={
-                <News pageSize={12} country={"in"} category={"business"} />
+                <News
+                  key="business"
+                  pageSize={12}
+                  country={"in"}
+                  category={"business"}
+                />
               }
             />
             <Route
+              exact
               path="/entertainment"
               element={
-                <News pageSize={12} country={"in"} category={"entertainment"} />
+                <News
+                  key="entertainment"
+                  pageSize={12}
+                  country={"in"}
+                  category={"entertainment"}
+                />
               }
             />
             <Route
+              exact
               path="/health"
               element={
-                <News pageSize={12} country={"in"} category={"health"} />
+                <News
+                  key="health"
+                  pageSize={12}
+                  country={"in"}
+                  category={"health"}
+                />
               }
             />
             <Route
+              exact
               path="/science"
               element={
-                <News pageSize={12} country={"in"} category={"science"} />
+                <News
+                  key="science"
+                  pageSize={12}
+                  country={"in"}
+                  category={"science"}
+                />
               }
             />
             <Route
+              exact
               path="/sports"
               element={
-                <News pageSize={12} country={"in"} category={"sports"} />
+                <News
+                  key="sports"
+                  pageSize={12}
+                  country={"in"}
+                  category={"sports"}
+                />
               }
             />
 
             <Route
+              exact
               path="/technology"
               element={
-                <News pageSize={12} country={"in"} category={"technology"} />
+                <News
+                  key="general"
+                  pageSize={12}
+                  country={"in"}
+                  category={"technology"}
+                />
               }
             />
           </Routes>
