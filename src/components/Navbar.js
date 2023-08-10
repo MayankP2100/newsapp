@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
   render() {
@@ -7,9 +8,9 @@ export default class Navbar extends Component {
       <>
         <nav className="container navbar navbar-expand-lg">
           <div className="container-fluid">
-            <a className="navbar-brand title" href="/">
+            <Link className="navbar-brand title" to="/">
               News Monkey
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -24,73 +25,68 @@ export default class Navbar extends Component {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/business">
                     Business
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/entertainment">
                     Entertainment
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    General
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/health">
                     Health
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/science">
                     Science
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/sports">
                     Sports
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <Link className="nav-link" to="/technology">
                     Technology
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle"
-                    href="/"
+                    to="/"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Country
-                  </a>
+                  </Link>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <Link className="dropdown-item" to="/">
                         India
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
+                      <Link
                         className="dropdown-item border-2 border-top border-bottom"
-                        href="/"
+                        to="/"
                       >
                         United States
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="/">
+                      <Link className="dropdown-item" to="/">
                         Japan
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
