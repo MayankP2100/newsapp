@@ -24,7 +24,8 @@ export default class NewsItem extends Component {
         "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg";
     }
 
-    date = new Date(date).toGMTString();
+    author ? (author = author) : (author = "Unknown");
+    date = new Date(date).toUTCString();
 
     return (
       <div className="container card my-3" style={{ width: "25rem" }}>
@@ -36,8 +37,10 @@ export default class NewsItem extends Component {
             <a className="btn btn-success mb-1" href={newsUrl}>
               Read More
             </a>
-            <p class="card-text text-center mb-2">
-              <small class="text-body-secondary">By {author} on {date}.</small>
+            <p className="card-text text-center mb-2">
+              <small className="text-body-secondary">{author}</small>
+              <br />
+              <small className="text-body-secondary">{date}</small>
             </p>
           </div>
         </div>
