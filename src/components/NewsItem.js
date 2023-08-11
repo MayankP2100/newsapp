@@ -3,7 +3,7 @@ import "./NewsItem.css";
 
 export default class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl, content } = this.props;
+    let { title, description, imageUrl, newsUrl, content, author, date } = this.props;
 
     if (title !== null) {
       title = title.slice(0, 60) + "...";
@@ -24,6 +24,8 @@ export default class NewsItem extends Component {
         "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg";
     }
 
+    date = new Date(date).toGMTString();
+
     return (
       <div className="container card my-3" style={{ width: "25rem" }}>
         <div className="col mt-2 px-1">
@@ -31,9 +33,12 @@ export default class NewsItem extends Component {
           <img className="image p-2" src={imageUrl} alt="" />
           <p>{description}</p>
           <div className="text-center">
-            <a className="btn btn-success mb-3" href={newsUrl}>
+            <a className="btn btn-success mb-1" href={newsUrl}>
               Read More
             </a>
+            <p class="card-text text-center mb-2">
+              <small class="text-body-secondary">By {author} on {date}.</small>
+            </p>
           </div>
         </div>
       </div>
