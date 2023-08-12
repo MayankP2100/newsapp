@@ -111,11 +111,11 @@ export default class Navbar extends Component {
             </div>
           </div>
         </nav>
-        <div className="container">
+        {/* <div className="container">
           <h6 className="d-flex  justify-content-center text-center px-5">
             Top Headlines
           </h6>
-        </div>
+        </div> */}
       </>
     );
   }
