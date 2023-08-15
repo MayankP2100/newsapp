@@ -17,10 +17,9 @@ export default class App extends Component {
       <>
         <Router>
           <Navbar />
-
           <Routes>
             <Route
-            exact
+              exact
               path="/"
               element={
                 <News
@@ -91,7 +90,6 @@ export default class App extends Component {
                 />
               }
             />
-
             <Route
               exact
               path="/technology"
