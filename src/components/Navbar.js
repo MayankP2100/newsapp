@@ -97,9 +97,9 @@ export default class Navbar extends Component {
                         className="dropdown-item border-2 border-top border-bottom"
                         to="/"
                       >
-                        United States
+                        US
                       </Link>
-                    </li>
+             </li>
                     <li>
                       <Link className="dropdown-item" to="/">
                         Japan
