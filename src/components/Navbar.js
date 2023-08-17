@@ -29,7 +29,7 @@ export default class Navbar extends Component {
               className="offcanvas offcanvas-end offcanvas-size-sm"
               id="navbarNavDropdown"
               data-bs-backdrop="static"
-              style={{overflow: "auto"}}
+              style={{ overflow: "auto" }}
             >
               <div className="offcanvas-header">
                 <h4 className="offcanvas-title p-2">Categories</h4>
@@ -39,7 +39,6 @@ export default class Navbar extends Component {
                   aria-label="Close"
                 ></button>
               </div>
-              <hr className="border-2" />
               <ul className="navbar-nav p-3">
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/">
@@ -80,6 +79,9 @@ export default class Navbar extends Component {
             </div>
           </div>
         </nav>
+        <div className="container">
+          <hr className="containerborder-2" />
+        </div>
       </>
     );
   }
