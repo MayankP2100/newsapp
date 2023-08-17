@@ -24,8 +24,11 @@ export default class NewsItem extends Component {
         "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg";
     }
 
-    author ? (author = author) : (author = "Unknown");
-    date = new Date(date).toUTCString();
+    if (author === null) {
+      author = "Unknown";
+    }
+
+    date = new Date(date).toLocaleString();
 
     return (
       <div className="container card my-3" style={{ width: "25rem" }}>
