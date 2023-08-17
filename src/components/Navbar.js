@@ -76,37 +76,7 @@ export default class Navbar extends Component {
                     Technology
                   </Link>
                 </li>
-                <li className="nav-item dropdown">
-                  <Link
-                    className="nav-link dropdown-toggle"
-                    to="/"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Country
-                  </Link>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link className="dropdown-item" to="/">
-                        India
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="dropdown-item border-2 border-top border-bottom"
-                        to="/"
-                      >
-                        United States
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/">
-                        Japan
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                
               </ul>
             </div>
           </div>
